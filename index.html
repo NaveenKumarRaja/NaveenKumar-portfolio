@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome Page</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body style="background-color: #070a13;">
+        <!-- <section class="justify-center">
+        <div>
+            <div id="welcome-section" class="flex items-center justify-center flex-col">
+                <div id="welcome-message" class="animate-bounce">
+                    <h1 class="text-4xl text-white">Welcome to Our Website!</h1>
+                </div>
+            </div>
+        </div>
+    </section> -->
+        <section class>
+            <div class="container mx-auto p-10 mt-5">
+                <div id="main-content" class="flex">
+                    <h3 class="text-2xl text-white font-bold">NaveenKumar
+                        Raja</h3>
+                    <div class="ml-auto">
+                        <button class="bg-white p-2 rounded-full" id="menu_button">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-10 w-10" fill="none"
+                                viewBox="0 0 24 24" stroke="#00c4ff">
+                                <path stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="1"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section
+            class="flex flex-col items-center justify-center text-center text-white mt-34">
+            <img src="asset/RNK-removebg-preview.png" alt="NaveenKumar Raja"
+                class="rounded-full w-72 h-72 mb-4">
+            <p class="text-2xl font-bold">Hi, <span>👋</span> I'm NaveenKumar
+                Raja</p>
+            <p class="text-7xl text-gray-400">SOFTWARE DEVELOPER</p>
+            <div class="mt-10">
+                <p class="lg:text-xl">Whether working independently or
+                    collaborating with a team, I
+                    focus on delivering high-quality code and maintaining best
+                    practices in software development.</p>
+
+            </div>
+            
+            <div class="p-10">
+                <button class="text-white font-bold py-2 px-4 rounded-lg flex items-center space-x-2 " id="resume_button" style="background-color: #00c4ff;">
+                    Resume
+                    <span class="ml-2">
+                        <svg stroke="currentColor" class="mt-1" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M476.59 227.05l-.16-.07L49.35 49.84A23.56 23.56 0 0027.14 52 24.65 24.65 0 0016 72.59v113.29a24 24 0 0019.52 23.57l232.93 43.07a4 4 0 010 7.86L35.53 303.45A24 24 0 0016 327v113.31A23.57 23.57 0 0026.59 460a23.94 23.94 0 0013.22 4 24.55 24.55 0 009.52-1.93L476.4 285.94l.19-.09a32 32 0 000-58.8z"></path>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <script>
+        // JavaScript to handle the transition from the welcome message to the main content
+        setTimeout(() => {
+            document.getElementById('welcome-section').classList.add('hidden');
+            document.getElementById('main-content').classList.remove('hidden');
+        }, 3000);
+    </script>
+        <style>
+        h1 {
+            animation-name: example;
+            animation-duration: 4s;
+        }
+        @keyframes example {
+            25%  { left:200px; top:0px;}
+            50%  { left:200px; top:200px;}
+        }
+        #resume_button:hover {
+            outline-color: transparent;
+            outline-style: solid;
+            box-shadow: 0 0 0 4px #00c4ff;
+            transition: box-shadow 0.7s;
+        }
+        #menu_button:hover {
+            outline-color: transparent;
+            outline-style: solid;
+            box-shadow: 0 0 0 4px #00c4ff;
+            transition: box-shadow 0.7s;
+        }
+    </style>
+    </body>
+</html>
