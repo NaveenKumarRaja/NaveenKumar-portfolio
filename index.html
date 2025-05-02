@@ -3,93 +3,359 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Welcome Page</title>
-        <!-- Tailwind CSS -->
+        <title>RNK</title>
+        <link rel="stylesheet" href="./style/home.css">
         <script src="https://cdn.tailwindcss.com"></script>
-        <!-- External JavaScript -->
         <script src="/script.js"></script>
-        <!-- Correct CSS Linking -->
-        <link rel="stylesheet" href="style/home.css">
     </head>
-    <body class=" ">
-        
-        <section class="items-center text-white mx-auto container mt-60" class="home-section">
-            <div class="text-center mt-10">
-                <h2 class="text-xl font-light">Hello, I am</h2>
-                <h1 class="text-6xl font-bold mt-2">NaveenKumar Raja</h1>
-                <p class="text-gray-400 text-lg mt-2">Software Developer</p>
-                <button class="mt-5 px-6 py-2 bg-cyan-500 text-white rounded-full shadow-lg hover:bg-pink-600">
-                  <i class="fas fa-download"></i> Print Resume
-                </button>
-              </div>
-        </section>
-        <header id="header" class="text-white container flex mx-auto py-4">
-            <div class="text-xl font-bold">NaveenKumar Raja</div>
-            <div class="flex gap-5 items-center ml-auto">
-                <a href="#home" class="hover:text-cyan-500">Home</a>
-                <a href="#about" class="hover:text-cyan-500">About</a>
-                <a href="#contact" class="hover:text-cyan-500">Contact</a>
-            </div>
+    <body class="min-h-screen p-10">
+        <header
+            class="container mx-auto px-6 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">RNK</h1>
+            <nav>
+                <ul class="flex space-x-8">
+                    <li><a href="#" class="text-pink-500">Home</a></li>
+                    <li><a href="#" class="hover:text-gray-300">About
+                            Me</a></li>
+                    <li><a href="#"
+                            class="hover:text-gray-300">Education</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Skills</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Contact
+                            Me</a></li>
+                </ul>
+            </nav>
         </header>
-        
-          <section class="items-center text-white mx-auto container mt-60" class="home-section">
-            <div class="text-center mt-10">
-                <h2 class="text-xl font-light">Hello, I am</h2>
-                <h1 class="text-6xl font-bold mt-2">NaveenKumar Raja</h1>
-                <p class="text-gray-400 text-lg mt-2">Software Developer</p>
-                <button class="mt-5 px-6 py-2 bg-cyan-500 text-white rounded-full shadow-lg hover:bg-pink-600">
-                  <i class="fas fa-download"></i> Print Resume
-                </button>
-              </div>
-        </section>
-        <section class="items-center text-white mx-auto container mt-60" class="home-section">
-            <div class="text-center mt-10">
-                <h2 class="text-xl font-light">Hello, I am</h2>
-                <h1 class="text-6xl font-bold mt-2">NaveenKumar Raja</h1>
-                <p class="text-gray-400 text-lg mt-2">Software Developer</p>
-                <button class="mt-5 px-6 py-2 bg-cyan-500 text-white rounded-full shadow-lg hover:bg-pink-600">
-                  <i class="fas fa-download"></i> Print Resume
-                </button>
-              </div>
-        </section>
-        <section class="items-center text-white mx-auto container mt-60" class="home-section">
-            <div class="text-center mt-10">
-                <h2 class="text-xl font-light">Hello, I am</h2>
-                <h1 class="text-6xl font-bold mt-2">NaveenKumar Raja</h1>
-                <p class="text-gray-400 text-lg mt-2">Software Developer</p>
-                <button class="mt-5 px-6 py-2 bg-pink-500 text-white rounded-full shadow-lg hover:bg-pink-600">
-                  <i class="fas fa-download"></i> Print Resume
-                </button>
-              </div>
-        </section>
-        <section class="items-center text-white mx-auto container mt-60" class="home-section">
-            <div class="text-center mt-10">
-                <h2 class="text-xl font-light">Hello, I am</h2>
-                <h1 class="text-6xl font-bold mt-2">NaveenKumar Raja</h1>
-                <p class="text-gray-400 text-lg mt-2">Software Developer</p>
-                <button class="mt-5 px-6 py-2 bg-pink-500 text-white rounded-full shadow-lg hover:bg-pink-600">
-                  <i class="fas fa-download"></i> Print Resume
-                </button>
-              </div>
-        </section>
-        <script>
-            const header = document.getElementById('header');
-let lastScrollY = window.scrollY;
+        <section
+            class="min-h-screen justify-center flex flex-col items-center">
+            <div
+                class="container mx-auto grid grid-cols-1 md:grid-cols-2 justify-center items-center justify-items-center ">
+                <div class="max-w-xl text-center md:text-left">
+                    <h2 class="text-5xl font-bold leading-tight">
+                        I'm <span class="text-cyan-400">NaveenKumar Raja</span>
+                    </h2>
+                    <h3 class="text-3xl font-bold text-pink-500 mt-2">Software
+                        Developer</h3>
+                    <p class="text-gray-300 mt-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Illum libero cupiditate sunt officia laudantium
+                        inventore
+                        vero accusantium.
+                    </p>
 
-window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
+                    <!-- Buttons -->
+                    <div
+                        class="mt-6 flex justify-center md:justify-start space-x-4">
+                        <button
+                            class="bg-gradient-to-r from-pink-500 to-purple-500 px-6 py-2 rounded-lg text-white font-semibold shadow-lg hover:opacity-80">
+                            Hire me
+                        </button>
+                        <button
+                            class="border border-pink-500 px-6 py-2 rounded-lg text-white font-semibold shadow-lg hover:bg-pink-500 transition">
+                            Let's Talk
+                        </button>
+                    </div>
 
-    if (currentScrollY > lastScrollY) {
-        // Scrolling down
-        header.classList.add('fixed-header');
-    } else {
-        // Scrolling up
-        header.classList.remove('fixed-header');
-    }
+                    <!-- Social Media Icons -->
+                    <div
+                        class="mt-6 flex justify-center md:justify-start space-x-4">
+                        <a href="#"
+                            class="text-pink-500 text-2xl hover:text-gray-300">🐦</a>
+                        <a href="#"
+                            class="text-pink-500 text-2xl hover:text-gray-300">📘</a>
+                        <a href="#"
+                            class="text-pink-500 text-2xl hover:text-gray-300">▶️</a>
+                    </div>
+                </div>
+                <div class="relative flex justify-center">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full w-80 h-80 blur-2xl opacity-50"></div>
+                    <img src="/asset/RNK-removebg-preview.png"
+                        alt="Profile Image"
+                        class="relative z-10 w-80 h-80 rounded-full border-4 border-gray-700">
+                </div>
+            </div>
 
-    lastScrollY = currentScrollY;
-});
-        </script>
-    </body>
+            <!-- Right Image -->
+
+            <div
+                class="stats grid grid-cols-1 sm:grid-cols-3 gap-6 text-center w-full max-w-4xl mx-auto mt-20">
+                <div
+                    class="stat flex flex-col items-center p-4 bg-gray-900 rounded-lg shadow-lg">
+                    <h3 class="text-3xl font-bold text-cyan-400">4+</h3>
+                    <p class="text-gray-300">Years of experience</p>
+                </div>
+                <div
+                    class="stat flex flex-col items-center p-4 bg-gray-900 rounded-lg shadow-lg">
+                    <h3 class="text-3xl font-bold text-cyan-400">10+</h3>
+                    <p class="text-gray-300">Projects completed</p>
+                </div>
+                <div
+                    class="stat flex flex-col items-center p-4 bg-gray-900 rounded-lg shadow-lg">
+                    <h3 class="text-3xl font-bold text-cyan-400">5+</h3>
+                    <p class="text-gray-300">Technologies Known</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section
+            class="justify-center flex flex-col items-center">
+            <h2 class="section-title mb-10"> About Me</h2>
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 justify-center items-center justify-items-center">
+                <div class="relative w-full md:w-1/2 flex justify-center">
+                    <div
+                        class="absolute w-64 h-64 md:w-80 md:h-80 bg-purple-300 rounded-full"></div>
+                    <img src="/asset/RNK-removebg-preview.png" alt="Profile Image"
+                        class="relative z-10 w-64 md:w-80 h-auto rounded-lg shadow-lg">
+                </div>
     
+                <!-- Right Side (Content) -->
+                <div class="w-full md:w-1/2 p-6">
+                    <p class="text-gray-600 mt-4">
+                        It is a long established fact that a reader will be
+                        distracted by readable content.
+                    </p>
+    
+                    <!-- Tabs -->
+                    <div class="flex space-x-6 border-b border-gray-600 pb-3 mt-2">
+                        <button
+                            class="tab-btn text-gray-400 font-semibold focus:outline-none hover:text-cyan-400"
+                            onclick="showTab('experience', this)">
+                            Experience
+                        </button>
+                        <button
+                            class="tab-btn text-gray-400 font-semibold focus:outline-none hover:text-cyan-400"
+                            onclick="showTab('education', this)">
+                            Education
+                        </button>
+                    </div>
+    
+                    <!-- Experience Section -->
+                    <div id="experience" class="tab-content mt-6">
+                        <h3 class="text-xl font-bold text-cyan-400">Experience</h3>
+                        <div class="mt-4 border-l-4 border-cyan-400 pl-4">
+                            <p class="text-lg font-semibold">Software Developer</p>
+                            <p class="text-sm text-gray-400">2021 - Present</p>
+                            <p class="mt-2 text-gray-300">Worked on multiple
+                                projects, developing web apps and automation
+                                tools.</p>
+                        </div>
+                    </div>
+    
+                    <!-- Education Section (Initially Hidden) -->
+                    <div id="education" class="tab-content mt-6 hidden">
+                        <h3 class="text-xl font-bold text-cyan-400">Education</h3>
+                        <div class="mt-4 border-l-4 border-cyan-400 pl-4">
+                            <p class="text-lg font-semibold">Bachelor of
+                                Engineering</p>
+                            <p class="text-sm text-gray-400">2016 - 2020</p>
+                            <p class="mt-2 text-gray-300">Studied Electrical and
+                                Electronics Engineering.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Left Side (Image) -->
+            
+
+            <!-- <script>
+                function showTab(tabId) {
+                    document.querySelectorAll('.tab-content').forEach(tab => {
+                        tab.classList.add('hidden');
+                    });
+                    document.getElementById(tabId).classList.remove('hidden');
+                }
+            </script> -->
+        </div>
+    </section>
+
+    <section class="skills-section justify-center flex flex-col items-center mt-44">
+        <h2 class="section-title">My Skills</h2>
+        <p class="section-subtitle">Let me help you</p>
+      
+        <div class="grid grid-cols-4 gap-16">
+          <div class="skill">
+            <div class="progress-circle" style="--percentage:90">
+              <img src="https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg" alt="Angular" class="icon-inside-circle">
+            </div>
+            <p class="skill-label">Angular</p>
+          </div>
+      
+          <div class="skill">
+            <div class="progress-circle" style="--percentage:90">
+              <img src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg" alt="JavaScript" class="icon-inside-circle">
+            </div>
+            <p class="skill-label">JavaScript</p>
+          </div>
+      
+          <div class="skill">
+            <div class="progress-circle" style="--percentage:80">
+              <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="HTML" class="icon-inside-circle">
+            </div>
+            <p class="skill-label">HTML</p>
+          </div>
+      
+          <div class="skill">
+            <div class="progress-circle" style="--percentage:60">
+              <img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="CSS" class="icon-inside-circle">
+            </div>
+            <p class="skill-label">CSS</p>
+          </div>
+      
+          <div class="skill">
+            <div class="progress-circle" style="--percentage:75">
+              <img src="https://cdn.worldvectorlogo.com/logos/postgresql.svg" alt="PostgreSQL" class="icon-inside-circle">
+            </div>
+            <p class="skill-label">PostgreSQL</p>
+          </div>
+      
+          <div class="skill">
+            <div class="progress-circle" style="--percentage:60">
+              <img src="https://cdn.worldvectorlogo.com/logos/salesforce-2.svg" alt="Salesforce" class="icon-inside-circle">
+            </div>
+            <p class="skill-label">Salesforce</p>
+          </div>
+      
+          <div class="skill">
+            <div class="progress-circle" style="--percentage:40">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" alt="Next.js" class="icon-inside-circle">
+            </div>
+            <p class="skill-label">Next.js</p>
+          </div>
+      
+          <div class="skill">
+            <div class="progress-circle" style="--percentage:70">
+              <div class="icon-split-circle">
+                <div class="half-circle left">
+                  <img src="https://cdn.worldvectorlogo.com/logos/selenium-logo.svg" alt="Selenium">
+                </div>
+                <div class="half-circle right">
+                  <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg" alt="Python">
+                </div>
+              </div>
+            </div>
+            <p class="skill-label">Selenium + Python</p>
+          </div>
+          
+          
+      
+        </div>
+      </section>
+      
+
+    <section class="contact-section">
+        <h2 class="section-title mb-10"> Contact Me</h2>
+        <div class="contact-container">
+          <!-- Left Contact Info -->
+          <div class="contact-info">
+            <h2>Let's Connect</h2>
+            <p>Looking for help? Fill the form and start a new adventure.</p>
+            <hr />
+      
+            <!-- Address -->
+            <div class="info-item">
+              <h2>Address </h2>
+              <div class="info-row flex">
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-cyan-500" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 11c1.656 0 3-1.344 3-3s-1.344-3-3-3-3 1.344-3 3 1.344 3 3 3zM12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+                  </svg>
+                </div>
+                <div class="info-text">
+                  <p>1/146, K.G.M Layout,<br>Nachipalayam, Kangayam Road,<br>Tiruppur - 641606<br>TamilNadu, India</p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Phone -->
+            <div class="info-item">
+              <h4>Phone :</h4>
+              <div class="info-row">
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-cyan-500" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 5a2 2 0 012-2h2.586a1 1 0 01.707.293l2.828 2.828a1 1 0 010 1.414L9.414 9.414a16.004 16.004 0 006.172 6.172l1.879-1.879a1 1 0 011.414 0l2.828 2.828a1 1 0 01.293.707V19a2 2 0 01-2 2h-1C7.82 21 3 16.18 3 10V7a2 2 0 012-2z" />
+                  </svg>
+                </div>
+                <div class="info-text">
+                  <p>+91 8838143392<br>+91 9790014803</p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Social -->
+            <div class="info-item">
+              <h4>Social :</h4>
+      
+              <!-- LinkedIn -->
+              <div class="info-row">
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-cyan-500" fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.762 0 5-2.24 5-5v-14c0-2.76-2.238-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.29c-.966 0-1.75-.79-1.75-1.75s.784-1.75 1.75-1.75 1.75.79 1.75 1.75-.784 1.75-1.75 1.75zm13.5 10.29h-3v-4.5c0-1.076-.924-2-2-2s-2 .924-2 2v4.5h-3v-9h3v1.26c.638-.982 1.92-1.26 3-1.26 2.21 0 4 1.79 4 4v5z" />
+                  </svg>
+                </div>
+                <div class="info-text">
+                  <p><a href="#" target="_blank">LinkedIn Profile</a></p>
+                </div>
+              </div>
+      
+              <!-- WhatsApp -->
+              <div class="info-row">
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-cyan-500" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M20.52 3.48a11.84 11.84 0 00-16.72 0 11.84 11.84 0 00-2.64 12.88L0 24l7.64-2a11.88 11.88 0 006.24 1.72A11.84 11.84 0 0020.52 3.48zM12 21.6a9.6 9.6 0 01-5.2-1.52l-.36-.2-4.52 1.2 1.2-4.4-.24-.36a9.6 9.6 0 0114.24-12.16 9.6 9.6 0 01-5.12 17.44zM16.16 14.4c-.28-.14-1.64-.8-1.88-.88s-.44-.14-.64.14c-.2.28-.74.88-.92 1.06-.16.18-.34.2-.62.06-.28-.14-1.18-.44-2.24-1.4-.82-.72-1.38-1.6-1.54-1.88s-.02-.42.12-.58c.14-.14.28-.34.42-.5.14-.16.2-.28.3-.46.1-.18.06-.34-.02-.48-.08-.14-.64-1.52-.88-2.08-.24-.56-.48-.48-.66-.48-.18 0-.36 0-.56 0-.18 0-.48.06-.72.28s-.94.92-.94 2.24.98 2.6 1.12 2.78c.14.18 1.92 2.96 4.66 4.14 1.3.56 1.82.62 2.44.52.38-.06 1.16-.48 1.32-.94.16-.46.16-.86.12-.94-.06-.08-.22-.14-.5-.28z" />
+                  </svg>
+                </div>
+                <div class="info-text">
+                  <p><a href="#">+91 8838143392</a></p>
+                </div>
+              </div>
+      
+              <!-- Email -->
+              <div class="info-row">
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-cyan-500" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M16 12H8m0 0l4-4m-4 4l4 4m8 2a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h12a2 2 0 012 2v12z" />
+                  </svg>
+                </div>
+                <div class="info-text">
+                  <p><a href="mailto:naveenkumarraja.contact@gmail.com">naveenkumarraja.contact@gmail.com</a></p>
+                </div>
+              </div>
+      
+            </div>
+          </div>
+      
+          <!-- Right Contact Form (unchanged) -->
+          <div class="contact-form">
+            <h4>Let's talk</h4>
+            <h2>Enter your project details</h2>
+            <p>Content here, content here', making it look like readable English. Many desktop publishing packages.</p>
+      
+            <form>
+              <div class="form-row">
+                <input type="text" placeholder="Your name" required>
+                <input type="email" placeholder="Your email" required>
+              </div>
+              <input type="text" placeholder="Your Subject.." required>
+              <textarea placeholder="Your message..." rows="4" required></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      
+
+        <footer>
+            <p>&copy; 2025 NaveenKumar Raja. All rights reserved.</p>
+        </footer>
+    </body>
 </html>
