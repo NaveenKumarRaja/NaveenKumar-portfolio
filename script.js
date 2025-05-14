@@ -44,4 +44,7 @@ document.querySelectorAll('.progress-circle').forEach(circle => {
     circle.style.background = `conic-gradient(#e6007e ${angle}deg, #9b51e0 ${angle}deg, #e0e0e0 ${angle}deg)`;
     circle.querySelector('.percent-text').innerText = percent + '%';
 });
-
+function togglePrivacy() {
+    const section = document.getElementById('privacy-policy');
+    section.classList.toggle('hidden');
+  }
