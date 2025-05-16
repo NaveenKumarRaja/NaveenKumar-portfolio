@@ -1,8 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-        document.getElementById('welcome-message').classList.add('hidden');
+   setTimeout(() => {
+      const welcome = document.getElementById('welcome-message');
+      welcome.classList.add('opacity-0', 'transition-opacity', 'duration-1000');
+      setTimeout(() => {
+        welcome.classList.add('hidden');
         document.getElementById('main-content').classList.remove('hidden');
-    }, 10000); // Change the duration (3000ms = 3 seconds) as needed
+      }, 1000); // Wait for fade-out transition
+    }, 1000);
 });
 
 // animation for the bottom info of the home page
