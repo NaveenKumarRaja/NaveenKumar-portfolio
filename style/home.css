@@ -27,51 +27,65 @@
   justify-items: center;
 }
 
-/* Progress Circle */
-.progress-circle {
-  --size: 100px;
-  --thickness: 8px;
-  --percentage: 75;
-
-  position: relative;
-  width: var(--size);
-  height: var(--size);
-  border-radius: 50%;
-  background: conic-gradient(
-    #10b981 calc(var(--percentage) * 1%),
-    #e5e7eb 0
-  );
-  display: flex;
-  align-items: center;
-  justify-content: center;
+html {
+  scroll-behavior: smooth;
+}
+/*  animation */
+@keyframes splitIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
-.progress-circle::before {
-  content: "";
-  position: absolute;
-  width: calc(var(--size) - var(--thickness) * 2);
-  height: calc(var(--size) - var(--thickness) * 2);
-  background: #ffffff;
-  border-radius: 50%;
-  z-index: 1;
+.stat-show {
+  animation: splitIn 0.6s ease-out forwards;
 }
 
-.icon-inside-circle {
-  position: relative;
-  width: 32px;
-  height: 32px;
-  z-index: 2;
+/* animation for project section */
+/* Initial state: hidden and translated */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-.percentage-label {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 14px;
-  font-weight: 600;
-  color: #000;
-  z-index: 3;
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+  opacity: 0; /* start hidden */
+}
+
+.slide-right {
+  animation: slideInRight 0.6s ease-out forwards;
+  opacity: 0; /* start hidden */
+}
+
+/* Optional: stagger animations for nicer effect */
+.project-hidden-mobile:nth-child(even) .slide-right {
+  animation-delay: 0.3s;
+}
+.project-hidden-mobile:nth-child(odd) .slide-left {
+  animation-delay: 0.15s;
 }
 
 /* contact section */

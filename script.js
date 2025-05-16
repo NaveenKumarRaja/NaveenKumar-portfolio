@@ -5,22 +5,62 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 10000); // Change the duration (3000ms = 3 seconds) as needed
 });
 
+// animation for the bottom info of the home page
+
+const sections = document.querySelectorAll('section');
+
 const header = document.getElementById('header');
 let lastScrollY = window.scrollY;
 
 window.addEventListener('scroll', () => {
+    let currentSectionId = '';
+
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    // Check if the section top is within viewport (e.g., top visible in viewport)
+    if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+      currentSectionId = section.id;
+    }
+  });
+console.log('Current section:', currentSectionId);
+  if (currentSectionId) {
+    console.log('Current section:', currentSectionId);
+  }
     const currentScrollY = window.scrollY;
 
     if (currentScrollY > lastScrollY) {
         // Scrolling down
-        header.classList.add('fixed-header');
+        console.log('Scrolling down');
+        // header.classList.add('fixed-header');
     } else {
+        console.log('Scrolling up');
         // Scrolling up
-        header.classList.remove('fixed-header');
+        // header.classList.remove('fixed-header');
     }
 
     lastScrollY = currentScrollY;
 });
+
+//  animation for projects section
+
+window.addEventListener('scroll', () => {
+  let currentSectionId = '';
+
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+
+    // Check if the section top is within viewport (e.g., top visible in viewport)
+    if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+      currentSectionId = section.id;
+    }
+  });
+
+  if (currentSectionId) {
+    console.log('Current section:', currentSectionId);
+  }
+});
+
+
 function showTab(tabId, buttonElement) {
     // Hide all tab contents
     document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
@@ -38,13 +78,21 @@ function showTab(tabId, buttonElement) {
     buttonElement.classList.remove('text-gray-400');
     buttonElement.classList.add('text-cyan-400', 'border-b-2', 'border-cyan-400');
 }
-document.querySelectorAll('.progress-circle').forEach(circle => {
-    const percent = circle.getAttribute('data-percentage');
-    const angle = (percent / 100) * 360;
-    circle.style.background = `conic-gradient(#e6007e ${angle}deg, #9b51e0 ${angle}deg, #e0e0e0 ${angle}deg)`;
-    circle.querySelector('.percent-text').innerText = percent + '%';
-});
 function togglePrivacy() {
     const section = document.getElementById('privacy-policy');
     section.classList.toggle('hidden');
-  }
+}
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.innerWidth < 768) {
+        document.querySelectorAll(".project-hidden-mobile").forEach(el => el.classList.add("hidden"));
+    }
+});
+
+function toggleProjects() {
+    const projects = document.querySelectorAll(".project-hidden-mobile");
+    const btn = document.getElementById("viewMoreBtn");
+    const isHidden = projects[0].classList.contains("hidden");
+
+    projects.forEach(el => el.classList.toggle("hidden"));
+    btn.textContent = isHidden ? "View Less" : "View More";
+}

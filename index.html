@@ -7,21 +7,69 @@
     <link rel="stylesheet" href="./style/home.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/script.js"></script>
+    <script src="script.js"></script>
   </head>
   <body class="min-h-screen">
-    <header class="sticky top-0 z-50 bg-white container mx-auto px-6 py-4 flex justify-between items-center border-b">
+    <header class="sticky top-0 z-50 bg-white border-b shadow-sm">
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-gray-900">
+          <a href="index.html">NaveenKumar Raja</a>
+        </h1>
 
-      <h1 class="text-2xl font-bold text-gray-900">
-        <a href="index.html">NaveenKumar Raja</a>
-      </h1>
-      <nav>
-        <ul class="flex space-x-6 text-gray-700 font-medium">
-          <li><a href="#about" class="hover:text-blue-600">About Me</a></li>
-          <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
-          <li><a href="#contact" class="hover:text-blue-600">Contact Me</a></li>
+        <!-- Desktop Nav -->
+        <nav class="hidden md:block">
+          <ul class="flex space-x-6 text-gray-700 font-medium">
+            <li><a href="#about" class="hover:text-blue-600">About Me</a></li>
+            <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
+            <li><a href="#contact" class="hover:text-blue-600">Contact
+                Me</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn"
+          class="md:hidden focus:outline-none text-gray-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden px-6 pb-4">
+        <ul
+          class="flex flex-col space-y-4 text-gray-700 font-medium text-right">
+          <li><a href="#about" class="hover:text-blue-600 mobile-link">About
+              Me</a></li>
+          <li><a href="#skills"
+              class="hover:text-blue-600 mobile-link">Skills</a></li>
+          <li><a href="#contact" class="hover:text-blue-600 mobile-link">Contact
+              Me</a></li>
         </ul>
-      </nav>
+      </div>
+
     </header>
+
+    <script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  });
+</script>
+
     <section id="home"
       class="min-h-screen justify-center flex flex-col items-center">
       <div
@@ -32,36 +80,78 @@
           </h2>
           <h3 class="text-3xl font-bold text-pink-500 mt-2">Software
             Developer</h3>
-            <p class="text-gray-700 mt-4">
-              I design and develop user-friendly web applications, automate workflows, and help businesses improve their digital processes through smart solutions.
-            </p>
-            
+          <p class="text-gray-700 mt-4">
+            I design and develop user-friendly web applications, automate
+            workflows, and help businesses improve their digital processes
+            through smart solutions.
+          </p>
 
           <!-- Buttons -->
           <div
             class="mt-6 flex justify-center md:justify-start space-x-4">
+            <!-- Let's Talk Button -->
             <button
-              class="bg-gradient-to-r from-pink-500 to-purple-500 px-6 py-2 rounded-lg text-white font-semibold shadow-lg hover:opacity-80">
-              Hire me
-            </button>
-            <button
-              class="border border-pink-500 px-6 py-2 rounded-lg text-white font-semibold shadow-lg hover:bg-pink-500 transition">
+              onclick="window.location.href='tel:+918838143392'"
+              class="border border-pink-500 px-6 py-2 rounded-lg text-pink-500 bg-transparent hover:text-white hover:bg-pink-500 font-semibold shadow-lg transition">
               Let's Talk
             </button>
+
+            <!-- Resume Button -->
+            <button
+              onclick="window.open('/asset/Naveenkumar Raja - Software Developer.pdf', '_blank')"
+              class="border border-pink-500 px-6 py-2 rounded-lg text-pink-500 bg-transparent hover:text-white hover:bg-pink-500 font-semibold shadow-lg transition">
+              Resume
+            </button>
+
           </div>
 
           <!-- Social Media Icons -->
-          <div
-            class="mt-6 flex justify-center md:justify-start space-x-4">
-            <a href="#"
-              class="text-pink-500 text-2xl hover:text-gray-300">🐦</a>
-            <a href="#"
-              class="text-pink-500 text-2xl hover:text-gray-300">📘</a>
-            <a href="#"
-              class="text-pink-500 text-2xl hover:text-gray-300">▶️</a>
+          <div class="flex space-x-6 mt-10 items-center ml-4">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/naveen-kumar-b715b01b0/"
+              target="_blank"
+              class="text-blue-600 hover:text-blue-800 flex items-center space-x-2">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                alt="LinkedIn" class="w-6 h-6">
+              <span>LinkedIn</span>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/918838143392" target="_blank"
+              class="text-green-600 hover:text-green-800 flex items-center space-x-2">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                alt="WhatsApp" class="w-6 h-6">
+              <span>WhatsApp</span>
+            </a>
+
+            <!-- Gmail with inline SVG -->
+            <a href="mailto:naveenkumarraja.contact@gmail.com"
+              class="hover:text-red-600 flex items-center space-x-2">
+              <svg height="24px" viewBox="0 0 48 48" width="24px"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"
+                  fill="#4caf50" />
+                <path
+                  d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"
+                  fill="#1e88e5" />
+                <polygon fill="#e53935"
+                  points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17" />
+                <path
+                  d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8h0C4.924,8,3,9.924,3,12.298z"
+                  fill="#c62828" />
+                <path
+                  d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z"
+                  fill="#fbc02d" />
+              </svg>
+              <span>Gmail</span>
+            </a>
           </div>
+
         </div>
-        <div class="relative flex justify-center">
+        <div class="relative flex justify-center mt-10">
           <div
             class="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full w-80 h-80 blur-2xl opacity-50"></div>
           <img src="/asset/RNK-removebg-preview.png"
@@ -75,21 +165,41 @@
       <div
         class="stats grid grid-cols-1 sm:grid-cols-3 gap-6 text-center w-full max-w-4xl mx-auto mt-20">
         <div
-          class="stat flex flex-col items-center p-4 bg-gray-900 rounded-lg shadow-lg">
+          class="stat stat-animate flex flex-col items-center p-4 bg-gray-900 rounded-lg shadow-lg opacity-0 transform scale-50">
           <h3 class="text-3xl font-bold text-cyan-400">4+</h3>
           <p class="text-gray-300">Years of experience</p>
         </div>
         <div
-          class="stat flex flex-col items-center p-4 bg-gray-900 rounded-lg shadow-lg">
+          class="stat stat-animate flex flex-col items-center p-4 bg-gray-900 rounded-lg shadow-lg opacity-0 transform scale-50">
           <h3 class="text-3xl font-bold text-cyan-400">10+</h3>
           <p class="text-gray-300">Projects completed</p>
         </div>
         <div
-          class="stat flex flex-col items-center p-4 bg-gray-900 rounded-lg shadow-lg">
+          class="stat stat-animate flex flex-col items-center p-4 bg-gray-900 rounded-lg shadow-lg opacity-0 transform scale-50">
           <h3 class="text-3xl font-bold text-cyan-400">5+</h3>
           <p class="text-gray-300">Technologies Known</p>
         </div>
       </div>
+      <script>
+  const stats = document.querySelectorAll(".stat-animate");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add("stat-show");
+        }, index * 200); // delay each for "split" effect
+        observer.unobserve(entry.target); // animate once
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  stats.forEach(stat => {
+    observer.observe(stat);
+  });
+</script>
 
     </section>
 
@@ -177,82 +287,167 @@
 
     </section>
 
+    <section id="projects"
+      class="flex flex-col items-center justify-center px-4 py-10 text-center container mx-auto">
+      <h2
+        class="section-title mb-10 text-3xl md:text-4xl font-bold">Projects</h2>
+
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <!-- Project 1 (Always Visible) -->
+          <div
+            class="h-full flex flex-col bg-white border rounded-xl shadow-sm slide-left">
+            <div class="p-4 border-b">
+              <h2 class="text-xl font-semibold">E-commerce Platform (MedusaJS,
+                AWS)</h2>
+            </div>
+            <div class="p-4 flex-grow">
+              <ul class="text-gray-700 pl-5 space-y-1">
+                <li>Built a scalable e-commerce platform using MedusaJS...</li>
+                <li>Developed a responsive frontend and admin dashboard...</li>
+                <li>Deployed the platform on AWS EC2...</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="project-hidden-mobile h-full flex flex-col bg-white border rounded-xl shadow-sm slide-left">
+            <div class="p-4 border-b">
+              <h2 class="text-xl font-semibold">The Ocean Leads (Angular,
+                PostgreSQL, Stripe)</h2>
+            </div>
+            <div class="p-4 flex-grow">
+              <ul class="text-gray-700 space-y-2">
+                <li>Built a SaaS lead generation platform...</li>
+                <li>Developed a messaging app using Appsmith...</li>
+                <li>Led testing, debugging, and deployment...</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="project-hidden-mobile h-full flex flex-col bg-white border rounded-xl shadow-sm">
+            <div class="p-4 border-b">
+              <h2 class="text-xl font-semibold">Document Generator (Salesforce,
+                Adobe Acrobat API)</h2>
+            </div>
+            <div class="p-4 flex-grow">
+              <ul class="text-gray-700 space-y-2">
+                <li>Automated document generation in Salesforce...</li>
+                <li>Built SMS automation tool...</li>
+                <li>Resolved complex Salesforce errors...</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div
+            class="project-hidden-mobile h-full flex flex-col bg-white border rounded-xl shadow-sm">
+            <div class="p-4 border-b">
+              <h2 class="text-xl font-semibold">AI Integration & Data Automation
+                (Salesforce, OpenAI)</h2>
+            </div>
+            <div class="p-4 flex-grow">
+              <ul class="text-gray-700 pl-4 space-y-1">
+                <li>Integrated Call Tools with Salesforce...</li>
+                <li>Automated updates of 100,000+ records...</li>
+                <li>Integrated OpenAI with Salesforce...</li>
+                <li>Developed dashboards and automation flows...</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Project 5 -->
+          <div
+            class="project-hidden-mobile h-full flex flex-col bg-white border rounded-xl shadow-sm">
+            <div class="p-4 border-b">
+              <h2 class="text-xl font-semibold">Salesforce Automation (Node.js,
+                Playwright)</h2>
+            </div>
+            <div class="p-4 flex-grow">
+              <ul class="text-gray-700 space-y-2">
+                <li>Automated recurring Salesforce data updates...</li>
+                <li>Built backend scripts to update thousands of records...</li>
+                <li>Streamlined business workflows...</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- View More button (only for mobile) -->
+        <div class="mt-6 md:hidden">
+          <button onclick="toggleProjects()" id="viewMoreBtn"
+            class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
+            View More
+          </button>
+        </div>
+
+        <div class="mt-8 text-center text-gray-500">
+          <p>Project info will be updated from the resume</p>
+        </div>
+      </div>
+    </section>
+
     <section id="skills" class="skills-section py-16 bg-gray-50">
       <h2 class="text-3xl font-bold text-center mb-10">Skills</h2>
-      <div class="skills-grid grid gap-10 w-full max-w-5xl mx-auto px-4">
-        <!-- Skill Item Template -->
-        <div class="skill">
-          <div class="progress-circle" style="--percentage:90">
-            <span class="percentage-label">90%</span>
-            <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg"
-              alt="HTML" class="icon-inside-circle">
-          </div>
-          <p class="skill-label">HTML</p>
+      <div
+        class="skills-grid grid gap-10 w-full max-w-5xl mx-auto px-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+
+        <div class="skill text-center">
+          <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="HTML"
+            class="w-16 h-16 mx-auto">
+          <p class="skill-label mt-2 text-lg font-medium">HTML</p>
         </div>
 
-        <div class="skill">
-          <div class="progress-circle" style="--percentage:50">
-            <span class="percentage-label">50%</span>
-            <img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="CSS"
-              class="icon-inside-circle">
-          </div>
-          <p class="skill-label">CSS</p>
+        <div class="skill text-center">
+          <img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="CSS"
+            class="w-16 h-16 mx-auto">
+          <p class="skill-label mt-2 text-lg font-medium">CSS</p>
         </div>
 
-        <div class="skill">
-          <div class="progress-circle" style="--percentage:95">
-            <span class="percentage-label">95%</span>
-            <img src="https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg"
-              alt="Angular" class="icon-inside-circle">
-          </div>
-          <p class="skill-label">Angular</p>
+        <div class="skill text-center">
+          <img src="https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg"
+            alt="Angular" class="w-16 h-16 mx-auto">
+          <p class="skill-label mt-2 text-lg font-medium">Angular</p>
         </div>
 
-        <div class="skill">
-          <div class="progress-circle" style="--percentage:65">
-            <span class="percentage-label">65%</span>
-            <img src="https://cdn.worldvectorlogo.com/logos/salesforce-2.svg"
-              alt="Salesforce Development" class="icon-inside-circle">
-          </div>
-          <p class="skill-label">Salesforce Development</p>
+        <div class="skill text-center">
+          <img src="https://cdn.worldvectorlogo.com/logos/salesforce-2.svg"
+            alt="Salesforce Development" class="w-16 h-16 mx-auto">
+          <p class="skill-label mt-2 text-lg font-medium">Salesforce
+            Development</p>
         </div>
 
-        <div class="skill">
-          <div class="progress-circle" style="--percentage:75">
-            <span class="percentage-label">75%</span>
-            <img src="https://cdn.worldvectorlogo.com/logos/postgresql.svg"
-              alt="PostgreSQL" class="icon-inside-circle">
-          </div>
-          <p class="skill-label">PostgreSQL</p>
+        <div class="skill text-center">
+          <img src="https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+            alt="PostgreSQL" class="w-16 h-16 mx-auto">
+          <p class="skill-label mt-2 text-lg font-medium">PostgreSQL</p>
         </div>
 
-        <div class="skill">
-          <div class="progress-circle" style="--percentage:80">
-            <span class="percentage-label">80%</span>
-            <img src="https://cdn.worldvectorlogo.com/logos/selenium-logo.svg"
-              alt="Python Selenium" class="icon-inside-circle">
-          </div>
-          <p class="skill-label">Python Selenium</p>
+        <div class="skill text-center">
+          <img src="/asset/icons8-selenium-48.png" alt="Python Selenium"
+            class="w-16 h-16 mx-auto">
+          <p class="skill-label mt-2 text-lg font-medium">Python Selenium</p>
         </div>
 
-        <div class="skill">
-          <div class="progress-circle" style="--percentage:80">
-            <span class="percentage-label">80%</span>
-            <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg"
-              alt="Node.js" class="icon-inside-circle">
-          </div>
-          <p class="skill-label">Node.js</p>
+        <div class="skill text-center">
+          <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg"
+            alt="Node.js" class="w-16 h-16 mx-auto">
+          <p class="skill-label mt-2 text-lg font-medium">Node.js</p>
         </div>
 
-        <div class="skill">
-          <div class="progress-circle" style="--percentage:80">
-            <span class="percentage-label">80%</span>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Apache-NiFi-logo.svg/768px-Apache-NiFi-logo.svg.png"
-              alt="Apache NiFi" class="icon-inside-circle">
-          </div>
-          <p class="skill-label">Apache NiFi</p>
+        <div class="skill text-center">
+          <img
+            src="https://images.icon-icons.com/2699/PNG/512/apache_nifi_logo_icon_168614.png"
+            alt="Apache NiFi" class="w-16 h-16 mx-auto">
+          <p class="skill-label mt-2 text-lg font-medium">Apache NiFi</p>
         </div>
+
       </div>
     </section>
 
@@ -261,7 +456,8 @@
       <div class="contact-container">
         <!-- Left Contact Info -->
         <div class="contact-info">
-          <h2 class="text-xl md:text-2xl font-semibold mb-4">Let's Connect</h2><!-- 
+          <h2 class="text-xl md:text-2xl font-semibold mb-4">Let's
+            Connect</h2><!-- 
           <p class="text-lg text-gray-700 mb-6">Looking for help? Fill the form
             and start a new adventure.</p> -->
           <hr class="mb-8" />
@@ -320,13 +516,14 @@
       <div class="container mx-auto text-center">
         <p>&copy; 2025 NaveenKumar Raja. All rights reserved.</p>
         <div class="mt-2">
-          <a href="terms-and-service.html" class="underline hover:text-gray-300">Terms of Service</a>
+          <a href="terms-and-service.html"
+            class="underline hover:text-gray-300">Terms of Service</a>
           |
-          <a href="privacy-policy.html" class="underline hover:text-gray-300">Privacy Policy</a>
+          <a href="privacy-policy.html"
+            class="underline hover:text-gray-300">Privacy Policy</a>
         </div>
       </div>
     </footer>
-    
 
   </body>
 </html>
